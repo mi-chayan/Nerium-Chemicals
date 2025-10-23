@@ -1,6 +1,6 @@
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open("Nerium-cache").then(cache => {
+    caches.open("nerium-cache").then(cache => {
       return cache.addAll([
         "index.html",
         "manifest.json",
