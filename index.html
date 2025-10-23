@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nerium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#004080">
+
+  <!-- Google Font: Oswald -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+    }
+
+    /* Top title bar */
+    .header {
+      background-color: #881A51; /* new background color */
+      color: #D9D9D8; /* new font color */
+      font-family: 'Oswald', sans-serif; /* Oswald font */
+      font-weight: bold;
+      font-size: 28px; /* new font size */
+      height: 8vh; /* header height relative to viewport */
+      line-height: 8vh; /* vertical centering */
+      text-align: center;
+    }
+
+    /* Iframe below the header */
+    iframe {
+      border: none;
+      width: 100%;
+      height: 92vh; /* remaining height of viewport */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">Nerium</div>
+
+  <!-- Looker Studio iframe -->
+  <iframe 
+    src="https://lookerstudio.google.com/embed/reporting/9ac8a284-1c31-4eb3-9ac3-8bbb25efeed8/page/NXwUF?rm=minimal" 
+    allowfullscreen>
+  </iframe>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
